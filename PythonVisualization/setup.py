@@ -22,5 +22,5 @@ setuptools.setup(
   classifiers=classifiers,
   keywords='GUI, UI, Visualization', 
   packages=setuptools.find_packages(),
-  install_requires=[''] 
+  install_requires=['screeninfo'] 
 )
