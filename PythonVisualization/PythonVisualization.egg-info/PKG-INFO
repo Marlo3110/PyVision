@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PythonVisualization
+Version: 0.0.1
+Summary: A basic library to create easy GUI. Also useable to create games or other visualization
+Home-page: https://github.com/Marlo3110
+Download-URL: https://github.com/Marlo3110/PythonVisualization/blob/main/pythonvisualization-0.0.1.tar.gz
+Author: Marlo3110
+Author-email: marlo3110.001@Gmail.com
+License: MIT
+Keywords: GUI,UI,Visualization
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.md
