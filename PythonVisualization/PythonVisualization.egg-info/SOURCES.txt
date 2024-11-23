@@ -4,7 +4,10 @@ MANIFEST.in
 README.md
 __init__.py
 setup.py
+BaseParts/Window.py
+BaseParts/__init__.py
 PythonVisualization.egg-info/PKG-INFO
 PythonVisualization.egg-info/SOURCES.txt
 PythonVisualization.egg-info/dependency_links.txt
+PythonVisualization.egg-info/requires.txt
 PythonVisualization.egg-info/top_level.txt
