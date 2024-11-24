@@ -1,1 +1,1 @@
-from Window import *
+from .Window import *
