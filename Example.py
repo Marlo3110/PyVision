@@ -2,28 +2,18 @@ import PythonVisualization.BaseParts as BP
 from time import sleep, time
 
 Window = BP.Window(WindowScaleType = "RelativeScale", WindowAspectRatioX = 0.50, WindowAspectRatioY = 0.50)
+NewLabel = BP.TextLabel(Parent = Window, AspectRatioXPosition = 0.5, AspectRatioX= 1)
+NewLabelNew = BP.TextLabel(BackgroundColor = "FFFFFF", TextColor = "000000",Parent = Window, AspectRatioXPosition = 0.50, AspectRatioYPosition= 0.25, AspectRatioX= 0.5)
 
 print(Window.Monitor)
 print("")
 
-#def UpdateScreenSize():
-#    while True:
-#        StartTime = time()
-#        sleep(1)
-#        EndTime = time()
-#        
-#        DeltaTime = EndTime-StartTime
-#        Window.AspectRatioX += 0.1*DeltaTime*100
-#        Window.AspectRatioY += 0.1*DeltaTime*100
-#        Window.UpdateScreenSize()
-#        
-#        print(f"X: {Window.AspectRatioX}, Y: {Window.AspectRatioY}")
-#
-#        Window.Window.update()
-
-Window.SetScreenSize(AspectRatioX = 0.50, AspectRatioY = 0.50)
+Window.SetScreenSize(AspectRatioX = 0.75, AspectRatioY = 0.75)
 Window.UpdateScreenSize()
 
-def Test():
-    Window.SetScreenSize(AspectRatioX = 0.75, AspectRatioY = 0.75)
-Window.MainLoop(Test, 1000)
+
+for i in Window.Children:
+    print(i)
+    print("")
+
+Window.MainLoop()

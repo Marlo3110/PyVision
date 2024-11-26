@@ -25,6 +25,8 @@ class Window:
         
         self.Window = Tk.Tk(self.Title)
         self.UsePrimary = UsePrimary
+        self.Type = "Window"
+        self.Children = []
         # end #
 
         # Select monitor #
@@ -86,6 +88,10 @@ class Window:
             self.Window.mainloop()
         else:
             self.Window.mainloop()
+
+    def __repr__(self) -> str:
+
+        return (f"// Window|WindowScaleType:{self.WindowScaleType}|Title:{self.Title}| //")
 
 
     
