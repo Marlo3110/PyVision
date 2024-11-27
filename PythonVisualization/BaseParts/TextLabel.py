@@ -2,9 +2,6 @@ import tkinter as Tk
 
 class TextLabel:
 
-    def __repr__(self) -> str:
-
-        return (f"// TextLabel|Text:{self.Text}|TextColor:{self.TextColor}|BackgroundColor:{self.BackgroundColor}|Parent:{self.Parent.__repr__()}|AspectRatioX:{self.AspectRatioX}|AspectRatioY:{self.AspectRatioY}|AspectRatioXPosition{self.AspectRatioXPosition}|AspectRatioYPosition:{self.AspectRatioYPosition} //")
 
     def __init__(self, Text:str = "TextLabel", TextColor:str = "FFFFFF", Parent:any = None, AspectRatioX:float = 0.5,
                   AspectRatioY:float = 0.5, AspectRatioXPosition:float = 0.5, AspectRatioYPosition:float = 0.5,
@@ -36,3 +33,6 @@ class TextLabel:
 
         # end #
 
+    def __repr__(self) -> str:
+
+        return (f"// TextLabel|Text:{self.Text}|TextColor:{self.TextColor}|BackgroundColor:{self.BackgroundColor}|Parent:{self.Parent.__repr__()}|AspectRatioX:{self.AspectRatioX}|AspectRatioY:{self.AspectRatioY}|AspectRatioXPosition{self.AspectRatioXPosition}|AspectRatioYPosition:{self.AspectRatioYPosition} //")
