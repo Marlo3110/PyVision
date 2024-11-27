@@ -12,6 +12,7 @@ class TextLabel:
         self.TextColor = "#"+TextColor
         self.BackgroundColor = "#"+BackgroundColor
         self.Parent = Parent
+        self.Type = "TextLabel"
 
         self.AspectRatioX = AspectRatioX
         self.AspectRatioY = AspectRatioY
@@ -21,11 +22,11 @@ class TextLabel:
         # end #
 
         # initialize label #
-        self.TextLabel = Tk.Label(self.Parent.Window, text = self.Text, fg = self.TextColor, bg = self.BackgroundColor)
+        self.Container = Tk.Label(self.Parent.Container, text = self.Text, fg = self.TextColor, bg = self.BackgroundColor)
         self.Parent.Children.append(self.__repr__())
 
         if self.Parent.Type == "Window":
-            self.TextLabel.place(relwidth = self.AspectRatioX, relheight = self.AspectRatioY,
+            self.Container.place(relwidth = self.AspectRatioX, relheight = self.AspectRatioY,
                                   relx = self.AspectRatioXPosition, rely = self.AspectRatioYPosition,
                                   anchor = self.Anchor)
             

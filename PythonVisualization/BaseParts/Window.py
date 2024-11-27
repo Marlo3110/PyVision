@@ -23,7 +23,7 @@ class Window:
         self.AspectRatioX = WindowAspectRatioX
         self.AspectRatioY = WindowAspectRatioY
         
-        self.Window = Tk.Tk(self.Title)
+        self.Container = Tk.Tk(self.Title)
         self.UsePrimary = UsePrimary
         self.Type = "Window"
         self.Children = []
@@ -39,7 +39,7 @@ class Window:
         # end # 
 
         # Change resizeability #
-        self.Window.resizable(self.Resizeable, self.Resizeable)
+        self.Container.resizable(self.Resizeable, self.Resizeable)
         self.UpdateScreenSize()
 
     def UpdateScreenSize(self, Print = False) -> None:
@@ -50,14 +50,14 @@ class Window:
         if self.WindowScaleType == "AbsoluteScale":
             if self.WindowSizeX > self.Monitor.width or self.WindowSizeY > self.Monitor.height:
                 return None
-            self.Window.minsize(self.WindowSizeX, self.WindowSizeY)
-            self.Window.maxsize(self.WindowSizeX, self.WindowSizeY)
+            self.Container.minsize(self.WindowSizeX, self.WindowSizeY)
+            self.Container.maxsize(self.WindowSizeX, self.WindowSizeY)
 
         elif self.WindowScaleType == "RelativeScale":
             if self.AspectRatioX > 1 or self.AspectRatioY > 1:
                 return None
-            self.Window.minsize(int(self.AspectRatioX*self.Monitor.width), int(self.AspectRatioY*self.Monitor.height))
-            self.Window.maxsize(int(self.AspectRatioX*self.Monitor.width), int(self.AspectRatioY*self.Monitor.height))
+            self.Container.minsize(int(self.AspectRatioX*self.Monitor.width), int(self.AspectRatioY*self.Monitor.height))
+            self.Container.maxsize(int(self.AspectRatioX*self.Monitor.width), int(self.AspectRatioY*self.Monitor.height))
 
         
     def SetScreenSize(self, NewX = None, NewY = None, AspectRatioX = None, AspectRatioY = None, AutoUpdate = True,
@@ -84,10 +84,10 @@ class Window:
         run "Interval"(ms) after the mainloop started.
         """
         if Function != None:
-            self.Window.after(ms = Interval, func = Function)
-            self.Window.mainloop()
+            self.Container.after(ms = Interval, func = Function)
+            self.Container.mainloop()
         else:
-            self.Window.mainloop()
+            self.Container.mainloop()
 
     def __repr__(self) -> str:
 
