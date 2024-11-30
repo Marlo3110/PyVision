@@ -78,7 +78,7 @@ class Window:
         if AutoUpdate == True:
             self.UpdateScreenSize(Print)
             
-    def MainLoop(self, Function = None, Interval:int = 1000) -> None:
+    def MainLoop(self, Function:any = None, Interval:int = 1000) -> None:
         """
         Initiates the tk.mainloop() function. You can also use the parameter "Function" to 
         run "Interval"(ms) after the mainloop started.
@@ -91,7 +91,7 @@ class Window:
 
     def __repr__(self) -> str:
 
-        return (f"// Window|WindowScaleType:{self.WindowScaleType}|Title:{self.Title}| //")
+        return (f"// {self.Type}|WindowScaleType:{self.WindowScaleType}|Title:{self.Title}| //")
 
 
     

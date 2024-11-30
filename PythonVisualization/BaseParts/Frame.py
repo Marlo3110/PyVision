@@ -13,6 +13,7 @@ class Frame:
         self.Container = Tk.Frame(self.Parent.Container, bg = self.BgColor)
         self.Anchor = Anchor
         self.Children = []
+        self.Monitor = self.Parent.Monitor
 
         self.AspectRatioX = AspectRatioX
         self.AspectRatioY = AspectRatioY
@@ -24,6 +25,11 @@ class Frame:
         self.Container.place(relwidth = self.AspectRatioX, relheight = self.AspectRatioY,
                               relx = self.AspectRatioXPosition, rely = self.AspectRatioYPosition,
                               anchor = self.Anchor)
+        self.Parent.Children.append(self)
+
+        def __repr__(self) -> str:
+
+            return (f"// {self.Type}|Parent:{self.Parent.__repr__()}|Children:{self.Children} //")
 
         
 
